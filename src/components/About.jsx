@@ -1,5 +1,5 @@
 import React from "react";
-import AboutImage from "../assets/about.jpg";
+import Headshot2 from "../assets/Headshot2.jpg";
 
 const About = () => {
   return (
@@ -8,13 +8,13 @@ const About = () => {
         <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <img
-            src={AboutImage}
+            src={Headshot2}
             alt=""
             className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
           />
           <div className="flex-1">
             <p className="text-lg mb-8">
-              I am a passionate frontend developer with afocus on building
+              I am a passionate frontend developer with a focus on building
               modern aresponsive web applications. With a strong foundation in
               frontend, I strive to create seamless and efficient user
               experience.
