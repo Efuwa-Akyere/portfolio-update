@@ -4,7 +4,7 @@ import resumePDF from "../assets/MyCV-Nov20.pdf";
 
 const Hero = () => {
   return (
-    <div className="bg-black text-white text-center py-16">
+    <div className="bg-gray-800 text-white text-center py-16">
       <img
         src={Headshot1}
         alt=""
@@ -17,10 +17,10 @@ const Hero = () => {
         </span>
         ,A junior frontend developer
       </h1>
-      <p className="mt-4 text-lg text-gray-300">
+      <p className="mt-6 text-lg text-gray-300">
         I specialize in building modern and responsive applications.
       </p>
-      <div className="mt-8 space-x-4">
+      <div className="mt-14 space-x-4">
         <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full">
           Contact Me
         </button>
