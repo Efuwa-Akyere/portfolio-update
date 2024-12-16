@@ -1,30 +1,31 @@
 import React from "react";
 import Library from "../assets/Library.png";
-import Ecommerce from "../assets/Ecommerce.png";
+import Dictionary from "../assets/Dictionary.png";
 import AfricanShop from "../assets/AfricaShop.png";
 
 const projects = [
   {
     id: 1,
-    name: "Libray Website",
-    technologies: "React,Javascript & Tailwind",
-    image: Library,
-    github: "https://efuwa-akyere.github.io/Animal",
-  },
-  {
-    id: 2,
-    name: "E-commerse Website",
-    technologies: "React,Javascript & Tailwind",
-    image: Ecommerce,
-    github: "https://efuwa-akyere.github.io/Animal",
-  },
-  {
-    id: 3,
     name: "African Shop Website",
     technologies: "React,Javascript & Tailwind",
     image: AfricanShop,
     github: "https://stylesconnectafrica.netlify.app/",
   },
+  {
+    id: 2,
+    name: "Libray Website",
+    technologies: "React,Javascript & Tailwind",
+    image: Library,
+    github: "https://thelibraryapp.netlify.app/",
+  },
+  {
+    id: 3,
+    name: "Dictionary Website",
+    technologies: "HTMl,Javascript & CSS",
+    image: Dictionary,
+    github: "https://efuwa-akyere.github.io/API-website/",
+  },
+ 
 ];
 
 const Projects = () => {
