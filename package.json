@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://efuwa-akyere.github.io/portfolio-update", 
+  "homepage": "https://efuwa-akyere.github.io/portfolio-update/", 
   "scripts": {
     "dev": "vite",
     "build": "vite build",
