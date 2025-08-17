@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://efuwa-akyere.github.io/portfolio-update/", 
+  "homepage": "https://efuwa-akyere.github.io/portfolio-update/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,10 +13,12 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "framer-motion": "^12.23.12",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
-    "react-router-dom": "^6.28.0"
+    "react-router-dom": "^6.28.0",
+    "react-scroll": "^1.9.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",

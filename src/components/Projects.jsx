@@ -1,64 +1,28 @@
-import React from "react";
-import Library from "../assets/Library.png";
-import Dictionary from "../assets/Dictionary.png";
-import AfricanShop from "../assets/AfricaShop.png";
+import AfricaShop from '../assets/AfricaShop.png'
+import Library from '../assets/Library.png'
+import Dictionary from '../assets/Dictionary.png'
 
 const projects = [
-  {
-    id: 1,
-    name: "African Shop Website",
-    technologies: "React,Javascript & Tailwind",
-    image: AfricanShop,
-    github: "https://stylesconnectafrica.netlify.app/",
-  },
-  {
-    id: 2,
-    name: "Libray Website",
-    technologies: "React,Javascript & Tailwind",
-    image: Library,
-    github: "https://thelibraryapp.netlify.app/",
-  },
-  {
-    id: 3,
-    name: "Dictionary Website",
-    technologies: "HTMl,Javascript & CSS",
-    image: Dictionary,
-    github: "https://efuwa-akyere.github.io/API-website/",
-  },
- 
+  { title: "Afican Shop Website", img: AfricaShop, link: "https://stylesconnectafrica.netlify.app/" },
+  { title: "Library App", img: Library, link: "https://thelibraryapp.netlify.app/" },
+  { title: "Dictionary", img: Dictionary, link: "https://efuwa-akyere.github.io/API-website/" },
 ];
 
 const Projects = () => {
   return (
-    <div className="bg-slate-100 text-black py-20" id="project">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12"> Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div
-              key={projects.id}
-              className="bg-gray-800 p-6 rounded-lg hover:shadow-lg transform transition-transform duration-300 hover:scale-105"
-            >
-              <img
-                src={project.image}
-                alt={projects.name}
-                className="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-              <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
-              <p className="text-gray-400 mb-4">{project.technologies}</p>
-              <a
-                href={project.github}
-                className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
+    <div id="projects" className="py-20 bg-white text-gray-800 px-10 md:px-24">
+      <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+      <div className="grid md:grid-cols-3 gap-8">
+        {projects.map((project, index) => (
+          <div key={index} className="relative group rounded-xl overflow-hidden shadow-lg">
+            <img src={project.img} alt={project.title} className="w-full h-56 object-cover" />
+            <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
+              <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
+              <a href={project.link} className="px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition">View Project</a>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-      <hr className="mt-16 border-black" />
     </div>
   );
 };

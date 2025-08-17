@@ -1,21 +1,61 @@
-import React from 'react'
+import React, { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+import { motion, AnimatePresence } from "framer-motion"; // for animation
 
 const Navbar = () => {
-  return (
-    <nav className='bg-slate-100 text-black px-8 md:px-16 lg:px-24'>
-        <div className='container py-2 flex justify-center md:justify-between items-center'>
-            <div className='text-2xl text-gray-800 font-bold hidden md:inline'>EfuwaYorke</div>
-            <div className='space-x-6 text-gray-800'>
-                <a href="#home"className='hover:text-gray-400'>Home</a>
-                <a href="#about"className='hover:text-gray-400'>About Me</a>
-                <a href="#service"className='hover:text-gray-400'>Services</a>
-                <a href="#project"className='hover:text-gray-400'>Projects</a>
-                <a href="#contact"className='hover:text-gray-400'>Contacts</a>
-            </div>
-           
-        </div>
-    </nav>
-  )
-}
+  const [isOpen, setIsOpen] = useState(false);
 
-export default Navbar
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <h1 className="text-2xl font-bold text-green-600">Efuwa Yorke</h1>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
+  <li><a href="#home" className="hover:text-green-600 transition">Home</a></li>
+  <li><a href="#about" className="hover:text-green-600 transition">About</a></li>
+  <li><a href="#skills" className="hover:text-green-600 transition">Skills</a></li>
+  <li><a href="#projects" className="hover:text-green-600 transition">Projects</a></li>
+  <li><a href="#services" className="hover:text-green-600 transition">Services</a></li>
+  
+</ul>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleMenu}
+          className="md:hidden text-gray-700 text-3xl focus:outline-none"
+        >
+          {isOpen ? <FiX /> : <FiMenu />}
+        </button>
+      </div>
+
+      {/* Mobile Menu with Animation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-white shadow-md overflow-hidden"
+          >
+            <ul className="flex flex-col items-center py-4 space-y-4 text-gray-700 font-medium">
+              <li><a href="#home" onClick={toggleMenu} className="hover:text-green-600">Home</a></li>
+              <li><a href="#about" onClick={toggleMenu} className="hover:text-green-600">About</a></li>
+              <li><a href="#skills" onClick={toggleMenu} className="hover:text-green-600">Skills</a></li>
+              <li><a href="#projects" onClick={toggleMenu} className="hover:text-green-600">Projects</a></li>
+              <li><a href="#services" onClick={toggleMenu} className="hover:text-green-600">Services</a></li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+};
+
+export default Navbar;

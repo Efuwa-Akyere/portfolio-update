@@ -1,74 +1,62 @@
 import React from "react";
-import Headshot2 from "../assets/Headshot2.jpg";
+import { motion } from "framer-motion";
+import HeadShot2 from '../assets/HeadShot2.jpg'
+import resumePDF from '../assets/MyCV.pdf'
 
 const About = () => {
   return (
-    <div className="bg-slate-100 text-black py-16" id="about">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
-        <div className="flex flex-col md:flex-row items-center md:space-x-12">
-          <img
-            src={Headshot2}
-            alt=""
-            className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
-          />
-          <div className="flex-1 mb-10">
-            <p className="text-lg mb-8">
-              I am a passionate frontend developer with a focus on building
-              modern and responsive web applications. With a strong foundation in
-              frontend, I strive to create seamless and efficient user
-              experience.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  HTML & CSS
-                </label>
-                <div className="grow bg-slate-200 rounded-full h-2.5">
-                  <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  REACT JS
-                </label>
-                <div className="grow bg-slate-200 rounded-full h-2.5">
-                  <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-11/12"></div>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  JAVASCRIT
-                </label>
-                <div className="grow bg-slate-200 rounded-full h-2.5">
-                  <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-9/12"></div>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 flex justify-between text-center">
-              <div>
-                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                   3+ 
-                </h3>
-                <p>Months Experience</p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                   5+ 
-                </h3>
-                <p>Projects Completed</p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                   2 
-                </h3>
-                <p>Happy Clients</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div id="about" className="py-20 bg-white text-gray-800 px-10 md:px-24">
+      <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
+      <div className="flex flex-col md:flex-row items-center gap-12">
+        {/* Profile Image */}
+        <motion.img 
+          src= {HeadShot2} 
+          alt="Efuwa Yorke" 
+          className="w-64 h-96 rounded-2xl object-cover shadow-lg"
+          initial={{ x: -50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+        />
+
+        {/* Text */}
+        <motion.div 
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="flex-1"
+        >
+          <p className="text-gray-600 leading-relaxed max-w-3xl">
+  I am a detail-oriented and result-driven <span className="font-semibold">Web Developer</span> 
+  with a strong foundation in <span className="font-semibold">HTML, CSS, JavaScript, React, 
+  Node.js, Express.js, TailwindCSS, and Git</span>. My journey in tech began after completing 
+  a <span className="font-semibold">BSc in Mathematics with Economics</span> at the University of Cape Coast, 
+  followed by intensive training at <span className="font-semibold">MEST Africa</span> and 
+  <span className="font-semibold">Developers in Vogue</span>.
+</p>
+
+<p className="mt-4 text-gray-600 leading-relaxed max-w-3xl">
+  Over the years, I have worked on projects including an African fashion e-commerce platform, 
+  a library application, and a dictionary app, applying my skills to create practical, user-friendly solutions. 
+  I also contributed as a <span className="font-semibold">Digital Skills Expert</span> with the 
+  <span className="font-semibold">Young Africa Innovates Program</span>, where I collaborated 
+  with innovators and supervisors to design impactful web solutions such as the Noghusam Cocoa Pod 
+  Breaking Machine landing page.
+</p>
+
+<p className="mt-4 text-gray-600 leading-relaxed max-w-3xl">
+  With strong communication, teamwork, and problem-solving skills, I’m committed to continuous learning 
+  and eager to contribute to innovative teams. My goal is to deliver solutions that not only meet 
+  expectations but also make a real impact.
+</p>
+          <a 
+            href= {resumePDF} 
+            open 
+            className="inline-block mt-6 px-6 py-3 bg-green-500 text-white rounded-full hover:scale-105 transition-transform"
+          >
+            View CV
+          </a>
+        </motion.div>
       </div>
-      <hr  className="mt-16 border-black"/>
     </div>
   );
 };

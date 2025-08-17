@@ -1,67 +1,82 @@
 import React from "react";
-import { FaFacebook, FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4">
-          <div className="flex-1 mb-4 md:mb-0">
-            <h3 className="text-2xl font-bold mb-2">Efuwa Yorke</h3>
-            <p className="text-gray-400">
-              Junior web developer based in Ghana, specializing in frontend
-              development
-            </p>
-          </div>
-          <div className="flex-1 w-full">
-            <form className="flex items-center justify-center">
-              <input
-                type="email"
-                placeholder="Enter Email"
-                className="w-full p-2 rounded-l-lg bg-gray-800 border border-gray-600 focus:outline-none focus:border-green-400"
-              />
-              <button
-                type="submit"
-                className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-r-lg"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-        <div className="border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400">
-            &copy;{new Date().getFullYear()}Efuwa Yorke. All rights reserved.
+    <footer className="bg-gray-900 text-gray-300 py-8 mt-20">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 grid md:grid-cols-3 gap-6 md:gap-12 text-center md:text-left">
+        
+        {/* Brand / Name */}
+        <div>
+          <h2 className="text-2xl font-bold text-white">Efuwa Yorke</h2>
+          <p className="mt-2 text-sm text-gray-400 leading-relaxed">
+            Web Developer | Passionate about building modern, user-friendly web applications.
           </p>
-          <div className="flex space-x-4 my-4 md:my-0">
-            <a
-              href="https://web.facebook.com/"
-              className="text-gray-400 hover:text-white"
-            >
-              <FaFacebook className="size-6"/>
-            </a>
-            <a
-              href="https://linkedin.com/in/efuwayorke13"
-              className="text-gray-400 hover:text-white"
-            >
-              <FaLinkedin className="size-6"/>
-            </a>
-            <a
-              href="https://github.com/Efuwa-Akyere"
-              className="text-gray-400 hover:text-white"
-            >
-              <FaGithub className="size-6"/>
-            </a>
-          </div>
-          <div className="flex space-x-4 ">
-            <a href="#" className="text-gray-400 hover:text-white">
-              Privacy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              Terms of Services
-            </a>
-          </div>
         </div>
+
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-3 text-center">Quick Links</h3>
+          <ul className="space-y-1 text-center">
+            <li><a href="#home" className="hover:text-green-500 transition">Home</a></li>
+            <li><a href="#about" className="hover:text-green-500 transition">About</a></li>
+            <li><a href="#skills" className="hover:text-green-500 transition">Skills</a></li>
+            <li><a href="#projects" className="hover:text-green-500 transition">Projects</a></li>
+            <li><a href="#services" className="hover:text-green-500 transition">Services</a></li>
+          </ul>
+        </div>
+
+        {/* Connect (Socials + Contact Info) */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-3">Connect</h3>
+
+          {/* Social Icons */}
+          <div className="flex justify-center md:justify-start space-x-4 mb-4">
+            <a
+              href="https://github.com/efuwa-akyere"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-white transition text-2xl"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-white transition text-2xl"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-white transition text-2xl"
+            >
+              <FaTwitter />
+            </a>
+          </div>
+
+          {/* Contact Info */}
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-center gap-3 justify-center md:justify-start">
+              <FaEnvelope className="text-gray-400 hover:text-white transition" /> efuwayorke13@gmail.com
+            </li>
+            <li className="flex items-center gap-3 justify-center md:justify-start">
+              <FaPhoneAlt className="text-gray-400 hover:text-white transition" /> +233 242 078 763
+            </li>
+            <li className="flex items-center gap-3 justify-center md:justify-start">
+              <FaMapMarkerAlt className="text-gray-400 hover:text-white transition" /> Accra, Ghana
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="mt-8 border-t border-gray-700 pt-4 text-center text-xs text-gray-500">
+        © {new Date().getFullYear()} Efuwa Yorke. All rights reserved.
       </div>
     </footer>
   );
