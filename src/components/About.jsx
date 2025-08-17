@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import HeadShot2 from '../assets/HeadShot2.jpg'
+import HeadShot2 from '../assets/Headshot2.jpg'
 import resumePDF from '../assets/MyCV.pdf'
 
 const About = () => {
