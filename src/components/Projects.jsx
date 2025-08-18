@@ -1,11 +1,13 @@
 import AfricaShop from '../assets/AfricaShop.png'
 import Library from '../assets/Library.png'
 import Dictionary from '../assets/Dictionary.png'
+import Ecommerce from '../assets/Ecommerce.png'
 
 const projects = [
   { title: "Afican Shop Website", img: AfricaShop, link: "https://stylesconnectafrica.netlify.app/" },
   { title: "Library App", img: Library, link: "https://thelibraryapp.netlify.app/" },
   { title: "Dictionary", img: Dictionary, link: "https://efuwa-akyere.github.io/API-website/" },
+  { title: "E-Commerce", img: Ecommerce, link: "https://noghusam.netlify.app/" },
 ];
 
 const Projects = () => {

@@ -31,7 +31,7 @@ const About = () => {
   Node.js, Express.js, TailwindCSS, and Git</span>. My journey in tech began after completing 
   a <span className="font-semibold">BSc in Mathematics with Economics</span> at the University of Cape Coast, 
   followed by intensive training at <span className="font-semibold">MEST Africa</span> and 
-  <span className="font-semibold">Developers in Vogue</span>.
+  <span className="font-semibold"> Developers in Vogue</span>.
 </p>
 
 <p className="mt-4 text-gray-600 leading-relaxed max-w-3xl">
@@ -44,7 +44,7 @@ const About = () => {
 </p>
 
 <p className="mt-4 text-gray-600 leading-relaxed max-w-3xl">
-  With strong communication, teamwork, and problem-solving skills, I’m committed to continuous learning 
+  With strong communication, teamwork, and problem-solving skills, I'm committed to continuous learning 
   and eager to contribute to innovative teams. My goal is to deliver solutions that not only meet 
   expectations but also make a real impact.
 </p>
