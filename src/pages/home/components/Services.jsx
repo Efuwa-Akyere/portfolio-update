@@ -11,7 +11,7 @@ const services = [
   },
   {
     id: 2,
-    title: "Frontend Development",
+    title: "Frontend Integration",
     description: "Building interactive and dynamic web applications with React & Tailwind.",
     icon: <FaLaptopCode className="text-4xl text-blue-400" />,
   },

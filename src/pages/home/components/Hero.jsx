@@ -1,7 +1,8 @@
 import React from "react";
-import HeadShot2 from "../assets/Headshot2.jpg";
+import HeadShot2 from "../../../assets/Headshot2.jpg";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Hero = () => {
   return (
@@ -22,12 +23,12 @@ const Hero = () => {
 </p>
 
         <div className="mt-8 flex gap-4 justify-center md:justify-start">
-          <a
-            href="#projects"
+          <Link
+            to="/projects"
             className="px-6 py-3 bg-green-500 rounded-full font-medium shadow-md hover:bg-green-600 transition"
           >
             View Projects
-          </a>
+          </Link>
           
         </div>
 

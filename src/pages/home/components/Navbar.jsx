@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion"; // for animation
+import { Link } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,10 +18,10 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
-  <li><a href="#home" className="hover:text-green-600 transition">Home</a></li>
+  <Link to="/" className="hover:text-green-600 transition">Home</Link>
   <li><a href="#about" className="hover:text-green-600 transition">About</a></li>
   <li><a href="#skills" className="hover:text-green-600 transition">Skills</a></li>
-  <li><a href="#projects" className="hover:text-green-600 transition">Projects</a></li>
+  <li><Link to="/projects" className="hover:text-green-600 transition">Projects</Link></li>
   <li><a href="#services" className="hover:text-green-600 transition">Services</a></li>
   
 </ul>
@@ -45,10 +46,10 @@ const Navbar = () => {
             className="md:hidden bg-white shadow-md overflow-hidden"
           >
             <ul className="flex flex-col items-center py-4 space-y-4 text-gray-700 font-medium">
-              <li><a href="#home" onClick={toggleMenu} className="hover:text-green-600">Home</a></li>
+              <Link to="/" onClick={toggleMenu} className="hover:text-green-600">Home</Link>
               <li><a href="#about" onClick={toggleMenu} className="hover:text-green-600">About</a></li>
               <li><a href="#skills" onClick={toggleMenu} className="hover:text-green-600">Skills</a></li>
-              <li><a href="#projects" onClick={toggleMenu} className="hover:text-green-600">Projects</a></li>
+              <li><Link to="/projects" onClick={toggleMenu} className="hover:text-green-600">Projects</Link></li>
               <li><a href="#services" onClick={toggleMenu} className="hover:text-green-600">Services</a></li>
             </ul>
           </motion.div>
