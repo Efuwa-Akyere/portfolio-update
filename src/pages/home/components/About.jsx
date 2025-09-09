@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import HeadShot2 from '../assets/Headshot2.jpg'
-import resumePDF from '../assets/MyCV.pdf'
+import HeadShot2 from '../../../assets/Headshot2.jpg'
+
 
 const About = () => {
   return (
@@ -26,8 +26,8 @@ const About = () => {
           className="flex-1"
         >
           <p className="text-gray-600 leading-relaxed max-w-3xl">
-  I am a detail-oriented and result-driven <span className="font-semibold">Web Developer</span> 
-  with a strong foundation in <span className="font-semibold">HTML, CSS, JavaScript, React, 
+  I am a detail-oriented and result-driven <span className="font-semibold">Web Developer</span>  
+  {' '}with a strong foundation in <span className="font-semibold">HTML, CSS, JavaScript, React, 
   Node.js, Express.js, TailwindCSS, and Git</span>. My journey in tech began after completing 
   a <span className="font-semibold">BSc in Mathematics with Economics</span> at the University of Cape Coast, 
   followed by intensive training at <span className="font-semibold">MEST Africa</span> and 
@@ -48,13 +48,7 @@ const About = () => {
   and eager to contribute to innovative teams. My goal is to deliver solutions that not only meet 
   expectations but also make a real impact.
 </p>
-          <a 
-            href= {resumePDF} 
-            open 
-            className="inline-block mt-6 px-6 py-3 bg-green-500 text-white rounded-full hover:scale-105 transition-transform"
-          >
-            View CV
-          </a>
+         
         </motion.div>
       </div>
     </div>

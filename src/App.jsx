@@ -1,35 +1,31 @@
-import './App.css'
-import About from './components/About'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
-import Projects from './components/Projects'
-import Services from './components/Services'
-import Skills from './components/Skills'
+import { createBrowserRouter, RouterProvider } from "react-router";
+
+import Index from "./pages/home";
+import ProjectIndex from "./pages/project";
+import Frontend from "./pages/project/components/Frontend";
+import Figma from "./pages/project/components/Figma";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Index />,
+  },
+  {
+    path: "/projects",
+    element: <ProjectIndex />,
+  },
+  {
+    path: "/frontend",
+    element: <Frontend />,
+  },
+  {
+    path: "/figma",
+    element: <Figma />,
+  },
+]);
 
 function App() {
-  return (
-    <div>
-      <Navbar />
-      <section id="home">
-        <Hero />
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <section id="skills">
-        <Skills />
-      </section>
-      <section id="projects">
-        <Projects />
-      </section>
-      <section id="services">
-        <Services />
-      </section>
-      <Footer />
-    </div>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
